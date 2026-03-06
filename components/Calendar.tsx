@@ -17,7 +17,7 @@ export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
 
   return (
     <div className="FontArmAllegroU text-black text-center mt-7">
-      <div className="FontArmDecorativeU grid grid-cols-7  text-base  text-gray-500">
+      <div className="FontArmDecorativeU grid grid-cols-7  text-base  text-black">
         {weekDays.map((day) => (
           <div key={day}>{day}</div>
         ))}
