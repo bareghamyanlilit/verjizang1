@@ -3,16 +3,25 @@
 import Image from "next/image";
 
 export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
+  const weekDays = ["Երկ", "Երք", "Չրք", "Հնգ", "Ուրք", "Շբթ", "Կիր"];
 
-  const firstDay = new Date(year, month - 1, 1).getDay(); // 0=Կիրակի, 1=Երկ
+  const firstDayRaw = new Date(year, month - 1, 1).getDay();
+  const firstDay = (firstDayRaw + 6) % 7;
+  
   const daysInMonth = new Date(year, month, 0).getDate();
 
   const calendarDays = [];
+
   for (let i = 0; i < firstDay; i++) calendarDays.push(null);
   for (let i = 1; i <= daysInMonth; i++) calendarDays.push(i);
 
   return (
-    <div className="FontArmAllegroU text-black text-center">
+    <div className="FontArmAllegroU text-black text-center mt-7">
+      <div className="FontArmDecorativeU grid grid-cols-7  text-base  text-gray-500">
+        {weekDays.map((day) => (
+          <div key={day}>{day}</div>
+        ))}
+      </div>
       <div className="grid grid-cols-7 gap-2 text-sm">
         {calendarDays.map((day, idx) =>
           day ? (
@@ -26,7 +35,7 @@ export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
                   alt="icon1"
                   width={500}
                   height={500}
-                  className="w-8 absolute -right-2 -top-2 rotate-20"
+                  className="w-8 absolute -right-2 top-1 rotate-20"
                 />
               )}
               <p>{day}</p>

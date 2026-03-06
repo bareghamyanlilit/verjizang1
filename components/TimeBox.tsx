@@ -33,7 +33,7 @@ export function TimeBox() {
     return () => clearInterval(timer);
   }, []);
   return (
-    <section className=" flex flex-col gap-5 text-center text-[#52422e]  px-6 py-10">
+    <section className=" flex flex-col gap-5 text-center   px-6 py-10">
       {timeLeft.finished ? (
         <div className="text-white text-2xl font-semibold px-4 bg-red-500 rounded-xl shadow">
           Միջոցառումն արդեն սկսվել է 🎉

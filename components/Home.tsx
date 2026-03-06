@@ -18,8 +18,8 @@ export function Home() {
       </div>
 
       <div className="FontArmDecorativeU italic text-center py-7 bg-[#EFEFEF]">
-        <h3 className="text-xl px-7">
-          Ամեն սկիզբ ունի ավարտ, Ամեն ավարտ մի նոր սկիզբ է․․․
+        <h3 className="text-xl px-7 mt-3">
+          Ամեն սկիզբ ունի ավարտ, <br />Ամեն ավարտ մի նոր սկիզբ է․․․
         </h3>
         <Image
           src="/icon1.png"
@@ -33,8 +33,8 @@ export function Home() {
       </div>
 
       <p className="FontArmDecorativeU italic text-xl p-7 text-center">
-        Սիրով հրավիրում ենք Ձեզ ներկա գտնվելու մեր ՎԵՐՋԻՆ ԶԱՆԳ հանդիսավոր
-        միջոցառմանը։ 23 Մայիսի, 2026 Ժամը՝ 10:00 Մեր հարազատ դպրոցում
+        Սիրով հրավիրում ենք Ձեզ <br /> ներկա գտնվելու մեր <br /> ՎԵՐՋԻՆ ԶԱՆԳ <br />հանդիսավոր
+        միջոցառմանը։<br /> 23 Մայիսի, 2026 <br /> Ժամը՝ 10:00 <br /> Մեր հարազատ դպրոցում
       </p>
 
       <Image
