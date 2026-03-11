@@ -7,7 +7,6 @@ import { Program } from "./Program";
 import { MusicPlayer } from "./music";
 import { useState } from "react";
 import { FaMusic } from "react-icons/fa";
-import { ScrollTop } from "./ScrollTop";
 
 export function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -76,7 +75,6 @@ export function Home() {
       </div>
 
       <Program />
-      <ScrollTop />
     </div>
   );
 }
