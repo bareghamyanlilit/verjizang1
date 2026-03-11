@@ -69,7 +69,7 @@ export function Home() {
         alt="icon1"
         width={500}
         height={500}
-        className=" w-full rounded-2xl "
+        className=" w-full rounded-2xl bg-cover "
         />
         </div>
 
