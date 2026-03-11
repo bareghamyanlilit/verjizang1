@@ -1,25 +1,46 @@
+"use client";
+
 import Image from "next/image";
 import { TimeBox } from "./TimeBox";
 import { Calendar } from "./Calendar";
 import { Program } from "./Program";
+import { MusicPlayer } from "./music";
+import { useState } from "react";
+import { FaMusic } from "react-icons/fa";
+import { ScrollTop } from "./ScrollTop";
 
 export function Home() {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <div>
+      {/* music button */}
+      <div>
+        <button
+          onClick={() => setIsPlaying(!isPlaying)}
+          className="fixed z-10 bg-[#000000] text-[#fdf8f5] right-4 top-4 rounded-full w-10 h-10 flex justify-center items-center"
+        >
+          <FaMusic />
+        </button>
+
+        <MusicPlayer isPlaying={isPlaying} />
+      </div>
       <div
         className="FontArmAllegroU tracking-0 h-screen bg-cover bg-center flex flex-col justify-between text-white p-7 text-3xl"
         style={{ backgroundImage: "url('/img1.jpg')" }}
       >
         <div>
           <p className="max-inline-min">Ավարտական Հանդես</p>
-          <h1 className="FontArmDecorativeU text-[#F8F8F836] mt-7 text-8xl max-inline-min ">12 Ա</h1>
+          <h1 className="FontArmDecorativeU text-[#F8F8F836] mt-7 text-8xl max-inline-min ">
+            12 Ա
+          </h1>
         </div>
         <p className="text-end">Վերջին զանգ</p>
       </div>
 
       <div className="FontArmDecorativeU italic text-center py-7 bg-[#EFEFEF]">
         <h3 className="text-xl px-7 mt-3">
-          Ամեն սկիզբ ունի ավարտ, <br />Ամեն ավարտ մի նոր սկիզբ է․․․
+          Ամեն սկիզբ ունի ավարտ, <br />
+          Ամեն ավարտ մի նոր սկիզբ է․․․
         </h3>
         <Image
           src="/icon1.png"
@@ -33,8 +54,10 @@ export function Home() {
       </div>
 
       <p className="FontArmDecorativeU italic text-xl p-7 text-center">
-        Սիրով հրավիրում ենք Ձեզ <br /> ներկա գտնվելու մեր <br /> ՎԵՐՋԻՆ ԶԱՆԳ <br />հանդիսավոր
-        միջոցառմանը։<br /> 23 Մայիսի, 2026 <br /> Ժամը՝ 10:00 <br /> Մեր հարազատ դպրոցում
+        Սիրով հրավիրում ենք Ձեզ <br /> ներկա գտնվելու մեր <br /> ՎԵՐՋԻՆ ԶԱՆԳ{" "}
+        <br />
+        հանդիսավոր միջոցառմանը։
+        <br /> 23 Մայիսի, 2026 <br /> Ժամը՝ 10:00 <br /> Մեր հարազատ դպրոցում
       </p>
 
       <Image
@@ -47,12 +70,13 @@ export function Home() {
 
       <div className="FontArmDecorativeU text-xl italic p-7 grid gap-2">
         <p className="text-center">Սիրով սպասում ենք</p>
-        <hr className="w-40 my-4 m-auto"/>
+        <hr className="w-40 my-4 m-auto" />
         <p className="text-center">Պահպանիր Օրը</p>
-        <Calendar year={2026} month={3} highlightDay={20}/>
+        <Calendar year={2026} month={3} highlightDay={20} />
       </div>
 
-      <Program/>
+      <Program />
+      <ScrollTop />
     </div>
   );
 }
