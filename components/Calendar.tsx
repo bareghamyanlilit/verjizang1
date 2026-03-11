@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { anim } from "@/data/data";
 
 export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
   const weekDays = ["Երկ", "Երք", "Չրք", "Հնգ", "Ուրք", "Շբթ", "Կիր"];
@@ -16,7 +18,7 @@ export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
   for (let i = 1; i <= daysInMonth; i++) calendarDays.push(i);
 
   return (
-    <div className="FontArmAllegroU text-black text-center mt-7">
+    <motion.div {...anim} className="FontArmAllegroU text-black text-center mt-7">
       <div className="FontArmDecorativeU grid grid-cols-7  text-base  text-black">
         {weekDays.map((day) => (
           <div key={day}>{day}</div>
@@ -45,6 +47,6 @@ export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
           ),
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

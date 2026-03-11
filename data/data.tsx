@@ -18,3 +18,16 @@ export const program = [
     img:'/img5.jpg'
   },
 ];
+
+export const anim: any = {
+  initial: { opacity: 0, y: 10 },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeIn",
+    },
+  },
+  viewport: { once: true },
+};

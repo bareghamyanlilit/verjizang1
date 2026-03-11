@@ -1,6 +1,7 @@
-import { program } from "@/data/data";
+import { anim, program } from "@/data/data";
 import Image from "next/image";
 import { CiLocationOn } from "react-icons/ci";
+import { motion } from "framer-motion";
 
 export function Program() {
   return (
@@ -15,34 +16,38 @@ export function Program() {
 const ProgramItem = ({ time, title, address, img }: any) => {
   return (
     <div className="FontArmDecorativeU italic my-8 flex flex-col items-center text-2xl text-center">
-      <h3 >{title}</h3>
-      <p>{time}</p>
+      <motion.h3 {...anim}>{title}</motion.h3>
+      <motion.p {...anim}>{time}</motion.p>
+      <motion.div {...anim}>
+        <Image
+          src="/icon3.png"
+          alt="icon3"
+          width={500}
+          height={500}
+          className=" w-25 -rotate-90 m-7"
+        />
+      </motion.div>
 
-      <Image
-        src="/icon3.png"
-        alt="icon3"
-        width={500}
-        height={500}
-        className=" w-25 -rotate-90 m-7"
-      />
-
-      <Image
-        src={img}
-        alt="icon1"
-        width={500}
-        height={500}
-        className="w-full rounded-2xl"
-      />
+      <motion.div {...anim}>
+        <Image
+          src={img}
+          alt="icon1"
+          width={500}
+          height={500}
+          className="w-full rounded-2xl"
+        />
+      </motion.div>
 
       {address != "" && (
-        <a
+        <motion.a
+          {...anim}
           href={`https://www.google.com/maps/search/${address}`}
           target="_blank"
           className="inline-flex items-center gap-2 mt-2 px-4 py-1.5 text-sm underline"
         >
           <CiLocationOn />
           Քարտեզ
-        </a>
+        </motion.a>
       )}
     </div>
   );
