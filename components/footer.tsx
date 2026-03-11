@@ -7,12 +7,12 @@ export function Footer() {
         Պատրաստվել է
         <div className="flex flex-col text-center">
           <Link href="https://www.instagram.com/webinvite.am?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-            Web Invite
+            Web Invite - ի
           </Link>
-          &
+          {/* &
           <Link href="https://www.instagram.com/hraviratomserby_saten?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
             hraviratomserby_saten
-          </Link>
+          </Link> */}
         </div>
         կողմից
       </div>

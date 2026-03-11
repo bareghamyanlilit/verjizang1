@@ -23,7 +23,7 @@ const ProgramItem = ({ time, title, address, img }: any) => {
         alt="icon3"
         width={500}
         height={500}
-        className="w-25 -rotate-90 m-7"
+        className=" w-25 -rotate-90 m-7"
       />
 
       <Image
@@ -31,7 +31,7 @@ const ProgramItem = ({ time, title, address, img }: any) => {
         alt="icon1"
         width={500}
         height={500}
-        className="w-full "
+        className="w-full rounded-2xl"
       />
 
       {address != "" && (

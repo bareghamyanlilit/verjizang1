@@ -16,7 +16,7 @@ export function Home() {
       <div>
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="fixed z-10 bg-[#000000] text-[#fdf8f5] right-4 top-4 rounded-full w-10 h-10 flex justify-center items-center"
+          className="fixed z-10 rounded-2xl bg-[#000000] text-[#fdf8f5] right-8 top-8 w-12  h-12 flex justify-center items-center"
         >
           <FaMusic />
         </button>
@@ -59,13 +59,16 @@ export function Home() {
         <br /> 23 Մայիսի, 2026 <br /> Ժամը՝ 10:00 <br /> Մեր հարազատ դպրոցում
       </p>
 
+<div className="p-7 bg-[#EFEFEF]">
+
       <Image
         src="/img2.jpg"
         alt="icon1"
         width={500}
         height={500}
-        className="w-full p-7 bg-[#EFEFEF]"
-      />
+        className=" w-full rounded-2xl "
+        />
+        </div>
 
       <div className="FontArmDecorativeU text-xl italic p-7 grid gap-2">
         <p className="text-center">Սիրով սպասում ենք</p>
