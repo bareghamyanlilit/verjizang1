@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="FontArmDecorativeU bottom-0 py-10 text-center text-base bg-[#1E1E1E8C]   text-[#fcfbfb]">
+    <footer className="FontArmDecorativeU bottom-0 py-10 text-center text-base bg-[#EFEFEF]   text-[#000000]">
       <div className="mt-2">
         Պատրաստվել է
         <div className="flex flex-col text-center">

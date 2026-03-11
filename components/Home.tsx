@@ -16,7 +16,7 @@ export function Home() {
       <div>
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="fixed z-10  rounded-2xl bg-[#000000] text-[#fdf8f5] right-8 top-8 w-12  h-12 flex justify-center items-center"
+          className="fixed z-10 text-2xl  rounded-2xl bg-[#1e1e1e] opacity-95 text-[#fdf8f5] right-7 top-7 w-15  h-15 flex justify-center items-center"
         >
           <FaMusic />
         </button>
