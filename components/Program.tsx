@@ -18,7 +18,6 @@ const ProgramItem = ({ time, title, address, img }: any) => {
     <div className="FontArmDecorativeU italic my-8 flex flex-col items-center text-2xl text-center">
       <motion.h3 {...anim}>{title}</motion.h3>
       <motion.p {...anim}>{time}</motion.p>
-      <motion.div {...anim}>
         <Image
           src="/icon3.png"
           alt="icon3"
@@ -26,9 +25,7 @@ const ProgramItem = ({ time, title, address, img }: any) => {
           height={500}
           className=" w-25 -rotate-90 m-7"
         />
-      </motion.div>
 
-      <motion.div {...anim}>
         <Image
           src={img}
           alt="icon1"
@@ -36,7 +33,6 @@ const ProgramItem = ({ time, title, address, img }: any) => {
           height={500}
           className="w-full rounded-2xl"
         />
-      </motion.div>
 
       {address != "" && (
         <motion.a
