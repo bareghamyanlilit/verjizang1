@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { anim } from "@/data/data";
 
 export function Calendar({ year = 2025, month = 9, highlightDay = 8 }) {
-  const weekDays = ["Երկ", "Երք", "Չրք", "Հնգ", "Ուրք", "Շբթ", "Կիր"];
+  const weekDays = ["Երկ", "Երք", "Չրք", "Հնգ", "Ուրբ", "Շբթ", "Կիր"];
 
   const firstDayRaw = new Date(year, month - 1, 1).getDay();
   const firstDay = (firstDayRaw + 6) % 7;
