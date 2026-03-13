@@ -1,7 +1,7 @@
 export const program = [
   {
     time: "10:00",
-    title: "ԵՐԵՎԱՆԻ ԴՊՐՈՑ",
+    title: "Հովհաննես Թումանյանի անվան \n Հիմնական թիվ 7",
     address: "",
     img:'/img3.jpg'
   },

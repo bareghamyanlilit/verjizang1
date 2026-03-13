@@ -16,7 +16,7 @@ export function Program() {
 const ProgramItem = ({ time, title, address, img }: any) => {
   return (
     <div className="FontArmDecorativeU italic my-8 flex flex-col items-center text-2xl text-center">
-      <motion.h3 {...anim}>{title}</motion.h3>
+      <motion.h3 {...anim} style={{ whiteSpace: "pre-line" }}>{title}</motion.h3>
       <motion.p {...anim}>{time}</motion.p>
         <Image
           src="/icon3.png"
