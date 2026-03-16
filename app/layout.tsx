@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="m-auto max-w-100" style={{ whiteSpace: "pre-line" }}>
+      <body className="m-auto max-w-md" style={{ whiteSpace: "pre-line" }}>
         {children}
         <Footer/>
       </body>
